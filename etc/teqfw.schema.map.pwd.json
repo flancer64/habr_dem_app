@@ -1,0 +1,10 @@
+{
+  "@flancer64/habr_dem_app": {
+    "/path/to/user/registry": {
+      "path": "/login",
+      "attrs": {
+        "identity": "login_id"
+      }
+    }
+  }
+}

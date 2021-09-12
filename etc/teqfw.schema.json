@@ -1,0 +1,35 @@
+{
+  "package": {
+    "app": {
+      "entity": {
+        "addr": {
+          "comment": "User addresses (many-to-one).",
+          "attr": {
+            "address_id": {"type": "id"},
+            "user_ref": {"type": "ref"},
+            "country_code": {
+              "type": "string",
+              "options": {"length": 2}
+            },
+            "zip": {"type": "string"},
+            "city": {"type": "string"},
+            "street": {"type": "string"}
+          },
+          "index": {},
+          "relation": {
+            "user": {
+              "attrs": ["user_ref"],
+              "ref": {
+                "path": "/path/to/user/registry",
+                "attrs": ["identity"]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "refs": {
+    "/path/to/user/registry": ["identity"]
+  }
+}

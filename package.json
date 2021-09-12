@@ -1,0 +1,35 @@
+{
+  "name": "@flancer64/habr_dem_app",
+  "version": "0.1.0",
+  "description": "DEM demo: main app to generate DB schemas",
+  "homepage": "https://github.com/flancer64/habr_dem_app",
+  "bugs": {
+    "url": "https://github.com/flancer64/habr_dem_app/issues",
+    "email": "alex@flancer32.com"
+  },
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Alex Gusev",
+    "email": "alex@flancer64.com",
+    "url": "https://github.com/flancer64"
+  },
+  "repository": "github:flancer64/habr_dem_app",
+  "scripts": {
+    "help": "node ./bin/tequila.mjs",
+    "rebuild": "rm -fr node_modules package-lock.json && npm install",
+    "schema": "node ./bin/tequila.mjs app-schema",
+    "startup-logs": "node ./bin/tequila.mjs core-startup-logs",
+    "test": "./node_modules/mocha/bin/mocha --require esm --recursive './test/**/*.test.js'",
+    "version": "node ./bin/tequila.mjs core-version"
+  },
+  "dependencies": {
+    "@flancer64/habr_dem_user_link": "github:flancer64/habr_dem_user_link",
+    "@flancer64/habr_dem_user_pwd": "github:flancer64/habr_dem_user_pwd",
+    "@teqfw/core": "github:teqfw/core",
+    "@teqfw/db": "github:teqfw/db",
+    "@teqfw/di": "github:teqfw/di",
+    "mysql2": "*",
+    "pg": "*"
+  },
+  "devDependencies": {}
+}
