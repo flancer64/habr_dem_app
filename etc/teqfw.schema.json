@@ -15,7 +15,6 @@
             "city": {"type": "string"},
             "street": {"type": "string"}
           },
-          "index": {},
           "relation": {
             "user": {
               "attrs": ["user_ref"],
